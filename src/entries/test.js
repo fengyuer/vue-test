@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from 'views/test/App'
-import router from 'routes'
+import router from 'routes/test'
 
 // 加载样式文件
 import 'assets/styles/baseFy.scss'
