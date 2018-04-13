@@ -5,10 +5,14 @@
   "author": "Fiona",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
-    "lint": "eslint --ext .js,.vue src",
-    "build": "node build/build.js"
+    "dev": "cross-env STAGE=production TARGET=hello node build/dev-server.js",
+    "start": "cross-env STAGE=production TARGET=hello node build/dev-server.js",
+    "build": "node build/build.js",
+    "dev:test": "cross-env STAGE=production TARGET=test node build/dev-server.js",
+    "build:test": "cross-env STAGE=production TARGET=test node build/build.js",
+    "dev:hello": "cross-env STAGE=production TARGET=hello node build/dev-server.js",
+    "build:hello": "cross-env STAGE=production TARGET=hello node build/build.js",
+    "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
     "vue": "^2.5.2",
@@ -28,6 +32,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "chalk": "^2.0.1",
     "copy-webpack-plugin": "^4.0.1",
+    "cross-env": "^5.1.4",
     "css-loader": "^0.28.0",
     "eslint": "^4.15.0",
     "eslint-config-standard": "^10.2.1",
@@ -38,6 +43,7 @@
     "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^3.0.1",
     "eslint-plugin-vue": "^4.0.0",
+    "eventsource-polyfill": "^0.9.6",
     "express": "^4.16.3",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.4",
@@ -65,6 +71,7 @@
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
+    "webpack-hot-middleware": "^2.22.0",
     "webpack-merge": "^4.1.0"
   },
   "engines": {

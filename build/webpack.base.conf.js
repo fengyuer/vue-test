@@ -28,14 +28,25 @@ module.exports = {
     path: config.build.assetsRoot,
     filename: '[name].js',
     publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+     ? config.build.assetsPublicPath
+     : config.dev.assetsPublicPath
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src'),
+      src: path.resolve(__dirname, '../src'),
+      assets: path.resolve(__dirname, '../src/assets'),
+      components: path.resolve(__dirname, '../src/components'),
+      servers: path.resolve(__dirname, '../src/servers'),
+      // utils: path.resolve(__dirname, '../src/utils'),
+      config: path.resolve(__dirname, '../src/config'),
+      models: path.resolve(__dirname, '../src/models'),
+      // plugins: path.resolve(__dirname, '../src/plugins'),
+      // store: path.resolve(__dirname, '../src/store'),
+      routes: path.resolve(__dirname, '../src/routes'),
+      views: path.resolve(__dirname, '../src/views')
     }
   },
   module: {
@@ -67,7 +78,7 @@ module.exports = {
           name: utils.assetsPath('media/[name].[hash:7].[ext]')
         }
       },
-      {
+      {        
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
         options: {
