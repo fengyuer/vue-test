@@ -1,0 +1,46 @@
+/// test v1.0
+//*//////   基准font-size  ////////*/
+$baseFontSize2: 50 !default;
+
+$actEmptyW:16rem / $baseFontSize2 !default;  // 左右留白大小
+$submitBtnH: 44rem / $baseFontSize2 !default; // 提交按钮高度
+$submitBtnBottom: 24rem / $baseFontSize2 !default; // 提交按钮底部距离
+$btnH: 48rem / $baseFontSize2 !default;
+$btnRadius: 8rem / $baseFontSize2 !default; // 按钮圆角大小
+$bgRadius: 8rem / $baseFontSize2 !default; // 圆角大小
+$singleItemH: 44rem / $baseFontSize2 !default;
+$btmNavBarH: 52rem / $baseFontSize2 !default; // 底部菜单条高度
+$halfW: 164rem / $baseFontSize2 !default; // 平分内容宽度
+$lineHeight: 130%;
+
+// 字体大小
+$bigFont: 18rem / $baseFontSize2 !default;
+$normalFont: 16rem / $baseFontSize2 !default;
+$smallFont: 14rem / $baseFontSize2 !default;
+$smallerFont: 12rem / $baseFontSize2 !default;
+
+// color
+$priBlack: #4a4a4a !default;
+$highlightColor: #0098ff !default;
+$grayText:  #7c7e86 !default;
+$disabledColor: #D4D8DC !default;
+$redText: #f40e0e !default;
+$orangeText: #F5A623 !default;
+
+$lightRed: #FF94A0 !default;
+$redBg: #EE1030 !default;
+$goldenBg:#e9c17e !default;
+$silveryBg:#c6ced7 !default;
+$copperyBg: #cea37e !default;
+
+
+$borColor: #ececec !default;        // 边框颜色
+$thinLineColor: #eaeaea !default;   // 细分界线颜色;
+$thickLineColor: #f6f8fa !default;  // 粗分界线颜色
+
+$linkColor: #3484F5 !default;        // 链接默认颜色
+
+$thinBor: 1rem / $baseFontSize2 solid $borColor !default;            // 细边框
+$thinLine: 1rem / $baseFontSize2 solid $thinLineColor !default;      // 细线
+$thickLine: 8rem / $baseFontSize2 solid $thickLineColor !default;   // 粗线
+

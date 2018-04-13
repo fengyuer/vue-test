@@ -4,6 +4,12 @@ import Vue from 'vue'
 import App from 'views/test/App'
 import router from 'routes'
 
+// 加载样式文件
+import 'assets/styles/baseFy.scss'
+import 'views/test/assets/css/test.scss'
+// 移动端自适应
+import 'assets/js/rem.js'
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
