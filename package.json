@@ -5,8 +5,8 @@
   "author": "Fiona",
   "private": true,
   "scripts": {
-    "dev": "cross-env STAGE=production TARGET=hello node build/dev-server.js",
-    "start": "cross-env STAGE=production TARGET=hello node build/dev-server.js",
+    "dev": "cross-env STAGE=production TARGET=test node build/dev-server.js",
+    "start": "cross-env STAGE=production TARGET=test node build/dev-server.js",
     "build": "node build/build.js",
     "dev:test": "cross-env STAGE=production TARGET=test node build/dev-server.js",
     "build:test": "cross-env STAGE=production TARGET=test node build/build.js",
