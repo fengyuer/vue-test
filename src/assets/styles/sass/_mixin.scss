@@ -1,0 +1,126 @@
+// created Apr.13th,2018 by Fiona
+@mixin border-box
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+@mixin flex1
+{
+   -webkit-flex: 1;
+      -moz-flex: 1;
+       -ms-flex: 1;
+        -o-flex: 1;
+           flex: 1;
+}
+@mixin flex
+{
+    display: -webkit-flex;
+    display:         flex;
+}
+@mixin align-items($type){
+    -webkit-align-items: $type;
+            align-items: $type;
+}
+@mixin backgroundSize($type){
+    -webkit-background-size: $type;
+       -moz-background-size: $type;
+            background-size: $type;
+
+}
+@mixin clear{
+    font-size: 0;
+
+    display: block;
+    visibility: hidden;
+    clear: both;
+
+    height: 0;
+
+}
+@mixin translate50{
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+@mixin translateX{
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+@mixin translateY{
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+@mixin rotate($deg){
+  -webkit-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+@mixin shadow($shadow){
+  -webkit-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+@mixin arrow{
+  content:'';
+  position: absolute;
+  width:0;
+  height:0;
+}
+@mixin textLinearGradient($color1,$color2,$start,$end){
+    background-image: -webkit-gradient(linear, $start, $end, from($color1), to($color2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin rightArrow($color,$size1,$size2){
+    width: $size1;
+    height: $size1;
+    border-top: $size2 solid $color;
+    border-right: $size2 solid $color;
+    @include rotate(45deg);
+}
+@mixin itemArrow($color){
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    width: 6px;
+    height: 6px;
+    margin-top: -4px;
+    border-width: 2px 2px 0 0;
+    border-color: $color;
+    border-style: solid;
+    -webkit-transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+@mixin OnlyOneRow{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+}
+// 多行显示
+@mixin textShowLine($num){
+    overflow: hidden;
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical; // 参考 https://github.com/postcss/autoprefixer/issues/776
+    /* autoprefixer: on */
+    -webkit-line-clamp: $num;
+    display: -webkit-box;
+
+}
+// 遮罩层
+@mixin blackCover{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.7);
+    z-index: 11;
+}
